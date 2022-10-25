@@ -30,3 +30,8 @@ form label{
     align-items: center;
     gap: 1rem;
 }
+.app{
+    font-size: 3rem;
+    text-align: center;
+    font-weight: bolder;
+}
