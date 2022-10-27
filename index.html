@@ -16,22 +16,28 @@
     <form action="" class="pswd-f" name="pswd-form">
         <h1>Generador de contraseña</h1>
         <span class="app"></span>
-        <label for="name">
-            <input type="checkbox" class="" placeholder="Nombre" autofocus>
+        <label for="range" class="l-range">
+            <input type="range" class="range" name="range" min="8" max="20">
+            <span>maximo de carácteres</span>
+        </label>
+        <label for="letters">
+            <input type="checkbox" class="letters"  name="letters" autofocus>
             <span>Incluir Letras</span>
         </label>
-        <label for="name">
-            <input type="checkbox" class="" placeholder="Nombre" autofocus>
+        <label for="numbers">
+            <input type="checkbox" class="numbers" name="numbers">
             <span>Incluir números</span>
         </label>
-        <label for="price">
-            <input type="checkbox" class="p" placeholder="Precio">
+        <label for="symbols">
+            <input type="checkbox" class="symbols" name="symbols">
             <span>Incluir simbolos</span>
         </label>    
-        <label for="btn">
-            <input type="checkbox" class="" value="Agregar">
+        <label for="words">
+            <input type="checkbox" class="words" name="words">
             <span>Incluir palabras</span>
         </label>
+        <label for="submit">
+            <input type="submit" class="submit" value="ok"></label>
     </form>
     <script src="./js/main.js"></script>    
 </body>
