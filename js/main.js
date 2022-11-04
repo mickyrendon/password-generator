@@ -7,14 +7,25 @@ const symbols = ['~','!','@','#','$','%','^','&','*','|', '/','"',':','<','>','?
 const alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
 
 const inputPswrd = document.querySelector('.app')
+const range = document.querySelector('.range')
 const submit = document.querySelector('form')
 const copyBtn = document.querySelector('.copy')
+
+// listening range input value
+const rangeEv = async (value) => {
+    const { rangeValue } = await import('./range.js')
+    // debugger
+    return rangeValue(value)
+}
+export const listenRange = range.addEventListener('input', rangeEv) 
+
 
 submit.addEventListener('submit', (e) => {
     copyBtn.classList.remove('hidden')
     e.preventDefault()
     const formE = e.target
     const newRange = formE.range.value
+    console.log(newRange);
     const checkboxs =  {
         letters: formE.letters.checked,
         numbers: formE.numbers.checked,
@@ -69,9 +80,9 @@ function iterator (range, checks){
     return finalPswd
 }
 
-copyBtn.addEventListener('click', async () => {
+const copyEv = async () => {
     const {copyPswrd} = await import('./copyPswrd.js')
     copyPswrd()
-})
-
+}
+copyBtn.addEventListener('click', copyEv)
 // console.log(words);
