@@ -1,2 +1,7 @@
 import { initialValue } from './range.js'
-globalThis.onload = initialValue
+import { checkbox } from './checkbox.js'
+
+globalThis.onload = () => {
+    checkbox()
+    initialValue()
+}
