@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="password generator by platzi community">
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,9 +17,10 @@
     <form action="" class="pswd-f" name="pswd-form">
         <h1>Generador de contraseña</h1>
         <span class="app"></span>
+        <!-- FIXME QUE EL LABEL TAMBIEN SEA CLICKABLE -->
         <label for="range" class="l-range">
             <input type="range" class="range" name="range" min="8" max="20">
-            <span>maximo de carácteres</span>
+            <span>Contraseña de <span class="char-range"></span> carácteres</span>
         </label>
         <label for="letters">
             <input type="checkbox" class="letters"  name="letters" autofocus>
@@ -36,9 +38,16 @@
             <input type="checkbox" class="words" name="words">
             <span>Incluir palabras</span>
         </label>
-        <label for="submit">
-            <input type="submit" class="submit" value="ok"></label>
+        <div class="btns-ctr">
+            <label for="copy">
+                <input type="button" class="copy hidden" value="Copiar">
+            </label>
+            <label for="submit">
+                <input type="submit" class="submit" value="Crear">
+            </label>
+        </div>
     </form>
-    <script src="./js/main.js"></script>    
+    <script type="module" src="./js/onload.js"></script>
+    <script  type="module" src="./js/main.js"></script>    
 </body>
 </html>

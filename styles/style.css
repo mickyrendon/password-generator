@@ -13,9 +13,10 @@ body{
     background-color: rgb(31, 31, 53);
     color: #fcfdfe;
     font-size: 1.3rem;
-}
+    scroll-behavior: smooth;
+}   
 form{
-    padding:2rem;
+    padding:3rem;
     max-width: 100%;
     height: 40rem;
     display: flex;
@@ -36,8 +37,28 @@ form label{
     align-items: stretch;
     text-align: center;
 }
+.btns-ctr{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+}
+.btns-ctr input{
+    padding: 1rem ;
+    color: rgb(31, 31, 53);
+    background-color: greenyellow;
+    font-weight: 700;
+    border: none;
+    border-radius: 0.3rem;
+}
 .app{
+    margin: 2.2rem 0;
+    height: 3rem;
     font-size: 3rem;
     text-align: center;
     font-weight: bolder;
+}
+.hidden{
+    display: none;
 }
