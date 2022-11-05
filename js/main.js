@@ -57,8 +57,7 @@ function iterator (range, checks){
     const arrs = []
     const strongpswd = []
     const pswdLength = range
-    const checkWrd = checks.words
-// FIXME
+
     if(checks.letters){
         arrs.push(alphabet)
     }
@@ -68,16 +67,11 @@ function iterator (range, checks){
     if(checks.symbols){
         arrs.push(symbols)
     }
-    // FIXME funciona pero afuera de la funcion, mejorar el codigo para que al checkar el btn se deseleccionen los demas y viceversa
-    // checkWrd.addEventListener('input', (e) => {
-    //         // submit.letters.checked = false
-    //         // submit.numbers.checked = false
-    //         // submit.symbols.checked = false
-    //         // arrs.push(words)
-    //         console.log(`checking words ${e}`);
-    // })
-    // if(checks.words){
-    // }
+// FIXME APLICAR EL LIMITE DE CARACTERES AL 'WORD'
+    if(checks.words){
+        console.log(words)
+        arrs.push(words)
+    }
 
     if(arrs.length < 1){
         copyBtn.classList.add('hidden')
