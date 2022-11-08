@@ -76,14 +76,13 @@ function iterator (range, checks){
     if(arrs.length < 1){
         copyBtn.classList.add('hidden')
         // TODO CAMBIARLO POR UN MODAL
-        return alert('Incluye por lo menos una opción para generar tu contraseña')
+        const modal = document.querySelector('.modal')
+        modal.classList.remove('hidden')
     }
 
     for (let i = 0; i < pswdLength; i++){
         const limits = arrs[randomNumbers(0, arrs.length -1)]
-        // debugger
         const rndmChar = limits[randomNumbers(0, limits.length -1)]
-
         strongpswd.push(rndmChar)   
     }
     const finalPswd = strongpswd.join('')
@@ -98,3 +97,11 @@ const copyEv = async () => {
 }
 copyBtn.addEventListener('click', copyEv)
 // console.log(words);
+
+// modal
+const btn = document.querySelector('.accept')
+const acceptBtn = async (e) => {
+    const {acceptF} = await import('./modal.js')
+    acceptF(e)
+}
+btn.addEventListener('click', acceptBtn)

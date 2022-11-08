@@ -48,7 +48,7 @@ form label{
     align-items: center;
     gap: 2rem;
 }
-.btns-ctr input{
+.btns-ctr input, .alert-ctr button{
     padding: 1rem ;
     color: rgb(31, 31, 53);
     background-color: greenyellow;
@@ -64,9 +64,44 @@ form label{
     font-weight: bolder;
     overflow-wrap:anywhere;
 }
-.hidden{
-    display: none;
-}
 form label:hover{
     cursor: pointer;
+}
+
+/* modal */
+.modal{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    position: absolute;
+    background-color: rgba(10, 9, 9, 0.74);
+}
+.alert-ctr{
+    width: 40rem;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: 'Electrolize', sans-serif;
+    background-color: rgb(8, 8, 8);
+    border: 1px solid greenyellow;
+    border-radius: 3rem;
+}
+.alert-ctr .alert-msge{
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+}
+.alert-ctr button{
+    max-width: 10rem;
+}
+.alert-ctr button:hover{
+    cursor: pointer;
+}
+
+/* toggle class */
+.hidden{
+    display: none;
 }
