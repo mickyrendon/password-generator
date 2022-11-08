@@ -17,11 +17,14 @@ body{
 }   
 form{
     padding:3rem;
+    width: 40rem;
+    min-height: 40rem;
     max-width: 100%;
-    height: 40rem;
+    max-height: 60rem;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-around;
+    gap: 1.7rem;
     border: 1px solid greenyellow;
     border-radius: 3rem;
     font-family: 'Electrolize', sans-serif;
@@ -32,6 +35,7 @@ form label{
     gap: 1rem;
 }
 .l-range{
+    margin-bottom: 2rem;
     height: 6rem;
     flex-direction: column;
     align-items: stretch;
@@ -54,11 +58,15 @@ form label{
 }
 .app{
     margin: 2.2rem 0;
-    height: 3rem;
+    min-height: 3rem;
     font-size: 3rem;
     text-align: center;
     font-weight: bolder;
+    overflow-wrap:anywhere;
 }
 .hidden{
     display: none;
+}
+form label:hover{
+    cursor: pointer;
 }
