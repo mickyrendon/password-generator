@@ -75,9 +75,14 @@ function iterator (range, checks){
 
     if(arrs.length < 1){
         copyBtn.classList.add('hidden')
-        // TODO CAMBIARLO POR UN MODAL
+    // geting modal and setting the span textcontent
         const modal = document.querySelector('.modal')
-        modal.classList.remove('hidden')
+              modal.classList.remove('hidden')
+        const sibling = [...modal.children]
+        const alertCtr = sibling[0].firstElementChild
+        const spanTxt = alertCtr.textContent = 'Incluye por lo menos una opción para generar tu contraseña.'
+        
+        return spanTxt
     }
 
     for (let i = 0; i < pswdLength; i++){
