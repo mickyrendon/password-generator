@@ -29,8 +29,7 @@ const othersChecks = async () => {
 }
 
 elements.forEach((e) => e.addEventListener('change', othersChecks))
-
-    // LISTENING AND VALIDATING CHECKBOX 'WORDS'
+// LISTENING AND VALIDATING CHECKBOX 'WORDS'
 const wordsCheckEv = async (e) => {
     const { checkboxWords } = await import('./checkbox.js')
     return checkboxWords(e)
@@ -67,9 +66,9 @@ function iterator (range, checks){
     if(checks.symbols){
         arrs.push(symbols)
     }
-// FIXME APLICAR EL LIMITE DE CARACTERES AL 'WORD'
+// recordar que cada palabra equivale a un caracter
     if(checks.words){
-        console.log(words)
+        console.log(words);
         arrs.push(words)
     }
 

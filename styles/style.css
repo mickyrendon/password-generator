@@ -93,6 +93,7 @@ form label:hover{
     font-size: 2rem;
     font-weight: 700;
     text-align: center;
+    color: #fcfdfede;
 }
 .alert-ctr button{
     max-width: 10rem;
