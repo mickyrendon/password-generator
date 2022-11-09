@@ -7,6 +7,7 @@ html{
     font-size: 62.5%;
 }
 body{
+    padding: 0 1rem;
     height: 100vh;
     display: grid;
     place-items: center;
@@ -17,7 +18,7 @@ body{
 }   
 form{
     padding:3rem;
-    width: 40rem;
+    /* width: 40rem; */
     min-height: 40rem;
     max-width: 100%;
     max-height: 60rem;
@@ -78,7 +79,8 @@ form label:hover{
     background-color: rgba(10, 9, 9, 0.74);
 }
 .alert-ctr{
-    width: 40rem;
+    width: 95vw;
+    max-width: 40rem;
     height: 20rem;
     display: flex;
     flex-direction: column;
